@@ -6,9 +6,13 @@ var nested = require('postcss-nested');
 var cssImport = require('postcss-import');
 var browserSync = require('browser-sync');
 
-gulp.task('styles', () => {
+var tskStyles = gulp.task('styles', () => {
     return gulp.src('./app/assets/styles/styles.css')
         .pipe(postcss([cssImport, autoprefixer, cssvars, nested]))
+        .on('error', (err) => {
+            console.log(err.toString());
+            tskStyles.emit('end');
+        })
         .pipe(gulp.dest('./app/temp/style'));
 });
 
