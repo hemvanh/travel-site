@@ -450,14 +450,19 @@ template {
   display: none;
 }
 
-body{
-    font-family:'Roboto', sans-serif;
-    color:#333;
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
 }
 
-img{
-    max-width:100%;
-    height:auto;
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .large-hero {
@@ -544,6 +549,8 @@ img{
     }
 
 .wrapper {
+    background-color: blue;
+    overflow: hidden;
     padding-left: 18px;
     padding-right: 18px;
     max-width: 1200px;
@@ -551,9 +558,25 @@ img{
     margin-right: auto;
 }
 
+.wrapper--medium {
+        max-width: 976px;
+    }
+
+.wrapper .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
 .page-section {
-    padding: 4.5rem 0;
+    padding:1.2rem 0;
 }
+
+@media(min-width: 800px) {
+
+.page-section {
+        padding: 4.5rem 0
+}
+    }
 
 .page-section--blue {
         background-color: #2f5572;
@@ -562,7 +585,82 @@ img{
 
 .headline {
     font-weight: 300;
-    font-size: 2.875rem;
     color: #2f5572;
-    
+    font-size: 1.9rem;
 }
+
+@media(min-width: 530px) {
+
+.headline {
+        font-size: 2.875rem
+}
+    }
+
+.headline--centered {
+        text-align: center;
+    }
+
+.headline--orange {
+        color: #d59541;
+    }
+
+.headline--small {
+        font-size: 1.2rem;
+    }
+
+@media(min-width: 530px) {
+
+.headline--small {
+            font-size: 1.875rem
+    }
+    }
+
+.headline--narrow {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+.headline--light {
+        font-weight: 100;
+    }
+
+.headline--b-margin-small {
+        margin-bottom: .5em;
+    }
+
+.headline--b-margin-large {
+        margin-bottom: 1.6em;
+    }
+
+.row {
+    background: yellow;
+
+}
+
+.row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+@media(min-width: 800px) {
+        .row__medium-4 {
+            float: left;
+            width: 33.33%;
+            background: red;
+        }
+        .row__medium-8 {
+            float: left;
+            width: 66.66%;
+            background: green;
+        }
+    }
+
+.row--gutters>div {
+        padding-right: 65px;
+    }
+
+.row--gutters{
+        margin-right:-65px;
+    }
