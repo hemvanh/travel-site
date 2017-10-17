@@ -549,22 +549,21 @@ img {
     }
 
 .wrapper {
-    background-color: blue;
-    overflow: hidden;
     padding-left: 18px;
     padding-right: 18px;
+    overflow: hidden;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.wrapper--medium {
-        max-width: 976px;
-    }
-
 .wrapper .wrapper {
         padding-left: 0;
         padding-right: 0;
+    }
+
+.wrapper--medium {
+        max-width: 976px;
     }
 
 .page-section {
@@ -633,11 +632,6 @@ img {
         margin-bottom: 1.6em;
     }
 
-.row {
-    background: yellow;
-
-}
-
 .row::after {
         content: "";
         clear: both;
@@ -648,12 +642,10 @@ img {
         .row__medium-4 {
             float: left;
             width: 33.33%;
-            background: red;
         }
         .row__medium-8 {
             float: left;
             width: 66.66%;
-            background: green;
         }
     }
 
@@ -661,6 +653,6 @@ img {
         padding-right: 65px;
     }
 
-.row--gutters{
-        margin-right:-65px;
+.row--gutters {
+        margin-right: -65px;
     }
