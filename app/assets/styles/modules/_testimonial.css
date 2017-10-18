@@ -2,7 +2,7 @@
     background-color: rgba(255, 255, 255, .8);
     padding: 0 18px 1px 18px;
     margin-bottom: 98px;
-    @atMedium {
+    @mixin atLarge {
         margin-bottom: 0;
         padding: 0 1.8125rem 1px 1.8125rem;
     }
@@ -32,8 +32,5 @@
     }
     &--last{
         margin-bottom: 0;
-        @mixin atMedium{
-            margin-bottom: 98px;
-        }
     }
 }
