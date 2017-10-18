@@ -26,16 +26,35 @@
     &__b-margin-until-medium {
         margin-bottom: 1rem;
     }
-    &--gutters>div {
-        padding-right: 65px;
-    }
     &--gutters {
         margin-right: -65px;
     }
-    &--gutters-large{
+    &--gutters>div {
+        padding-right: 65px;
+    }
+    &--gutters-small {
+        margin-right: -45px;
+    }
+    &--gutters-small>div {
+        padding-right: 45px;
+    }
+    &--gutters-large {
         margin-right: -100px;
     }
     &--gutters-large>div {
         padding-right: 100px;
+    }
+    &--t-padding {
+        padding-top: 80px;
+    }
+    /* Begin equal height rules */
+    &--equal-height-at-medium {
+        @mixin atMedium {
+            display: flex;
+        }
+        &>div {
+            float: none;
+            display: flex;
+        }
     }
 }
