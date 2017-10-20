@@ -1,0 +1,18 @@
+var gulp = require('gulp');
+var svgSprite = require('gulp-svg-sprite');
+var config = {
+    mode: {
+        css: {
+            render: {
+                css: {
+                    template: './gulp/templates/sprites.css'
+                }
+            }
+        }
+    }
+};
+gulp.task('createSprite', () => {
+    return gulp.src('./app/assets/images/icons/**/*.svg')
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest('./app/temp/sprite/'));
+});
