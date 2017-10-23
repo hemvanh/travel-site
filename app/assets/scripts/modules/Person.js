@@ -5,3 +5,5 @@ function Person(fullname, fColor) {
         console.log('Hello, my name is' + this.name + ' and my f-color is: ' + this.fColor);
     }
 }
+
+module.exports = Person;

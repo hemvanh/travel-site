@@ -1122,9 +1122,9 @@ Instead edit gulp/templates/sprite */
     }
     }
 
-.site-header__logo__graphic {
-        text-indent: -9999px;
-    }
+.site-header__logo__graphic{
+            text-indent:-999px;
+        }
 
 .site-header__menu-content {
         display: none;

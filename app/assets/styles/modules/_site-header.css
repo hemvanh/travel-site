@@ -21,9 +21,9 @@
             left: auto;
             transform: translateX(0);
         }
-    }
-    &__logo__graphic {
-        text-indent: -9999px;
+        &__graphic{
+            text-indent:-999px;
+        }
     }
     &__menu-content {
         display: none;
