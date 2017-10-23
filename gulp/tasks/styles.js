@@ -6,10 +6,11 @@ var nested = require('postcss-nested');
 var cssImport = require('postcss-import');
 var browserSync = require('browser-sync');
 var mixins = require('postcss-mixins');
+var hexrgba = require('postcss-hexrgba');
 
 var tskStyles = gulp.task('styles', () => {
     return gulp.src('./app/assets/styles/styles.css')
-        .pipe(postcss([cssImport, mixins, autoprefixer, cssvars, nested]))
+        .pipe(postcss([cssImport, mixins, cssvars, nested, hexrgba, autoprefixer]))
         .on('error', (err) => {
             console.log(err.toString());
             tskStyles.emit('end');
